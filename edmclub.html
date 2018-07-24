@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image" href="edmicon.png">
+  <title>EDMclub</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body{
+      position: relative;
+  }
+  .affix {
+      top: 0;
+      width: 100%;
+      z-index: 9999 !important;
+  }
+  .navbar{
+      margin-bottom: 0px;
+  }
+  .affix + .container-fluid {
+      padding-top: 70px;
+  }
+  #home {padding-top:50px;height: 800px; background-attachment: fixed;}
+  #artist {padding-top:50px; height: 800px; background-attachment: fixed;}
+  #event {padding-top:50px;height: 800px; background-attachment: fixed;}
+  #comment {padding-top:50px;height: 800px; background-attachment: fixed;}
+  #about {padding-top:50px;height: 800px; background-attachment: fixed;}
+  .carousel-inner > .item > img { 
+      width:100%; height:550px; 
+      }
+  .modal-content{
+      background-image: url("life.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+  }
+  </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="80">
+
+<div class="container-fluid">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="4000">
+                <!Indicators>
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="ative"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+                <!Wrapper for slides>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="danceshow.jpg" alt="live2" style="width:100%;" >
+                        <div class="carousel-caption">
+                            <h3>Best events of EDM</h3>
+                            <p>There are lot of EDM Event in the world right now</p>
+                            <ul>
+                               <li><p><b>Tommorowland</b><br><p><b><a href="https://www.tomorrowland.com/global/" style="color:#fff">https://www.tomorrowland.com/global/</a></b></p></li>
+                               <li><p><b>UltraMiami</b><br><p><b><a href="https://ultramusicfestival.com" style="color:#fff">https://ultramusicfestival.com</a></b></p></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item">
+                            <img src="artist2.jpg" alt="artist" style="width:100%;">
+                        <div class="carousel-caption">
+                            <h3>They are the legend who make our day</h3>
+                            <p>Love music Love life live today </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                            <img class="img-responsive" src="live3.jpg" alt="3" width="100%">
+                        <div class="carousel-caption">
+                            <h3>a moment of Tomorrowland</h3>
+                            <p>The heaven of the current world</p>
+                        </div>
+                    </div>
+                </div>
+                <!Left and right controls>
+                <a class="Left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                </a>
+            </div>
+</div>
+
+<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+    <div class="container-fluid">
+            <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>                        
+                  </button>
+                  <a class="navbar-brand navbar-left" href="#"> <img src="edmicon.png" width="40px" height="30px" > </a>
+                </div>
+            <div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#artist">Artist</a></li>
+                                <li><a href="#event">Events</a></li>
+                                <li><a href="#comment">Comment</a></li>
+                                <li><a href="#about">About us</a></li>  
+                              </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#"><span class="glyphicon glyphicon-user"> Sign Up</span></a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"> Login</span></a></li>
+                            <div id="myModal" class="modal fade" role="dialog">
+                                    <div class="modal-dialog">          
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h3 class="modal-title" style="color:#fff">Hello friend, Enter our EDM Community</h3>
+                                            </div>
+                                            <div class="modal-body">
+                                                    <form class="form-horizontal" action="">
+                                                        <div class="form-group">
+                                                          <label class="control-labal col-sm-2" for="email" style="color:#fff">Email: </label>
+                                                          <div class="col-sm-10">
+                                                          <input type="email" class="form-control" id="email" placeholder="Enter Email here">
+                                                        </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                          <label class="contro-labal col-sm-2" for="pwd" style="color:#fff">Password: </label>
+                                                          <div class="col-sm-10">
+                                                          <input type="password" class="form-control" id="pwd" placeholder="Enter Password here">
+                                                        </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="col-sm-offset-2 col-sm-10">
+                                                                    <div class="checkbox">
+                                                                            <label><input type="checkbox"> Remember me</label>
+                                                                          </div>
+                                                            </div>
+                                                        </div>
+                                                       <div class="form-group">
+                                                           <div class="col-sm-offset-2 col-sm-10">
+                                                                <button type="submit" class="btn btn-danger">GO</button>
+                                                           </div>
+                                                       </div>
+                                                      </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </ul>
+                </div> 
+            </div>
+    </div>
+</nav>
+
+<div id="home" class="container">
+   
+</div>
+<div id="artist" class="container">
+       
+    </div>
+    <div id="event" class="container">
+           
+        </div>
+        <div id="comment" class="container">
+               
+            </div>
+            <div id="about" class="container">
+                  
+                </div>
+</body>
+</html>
