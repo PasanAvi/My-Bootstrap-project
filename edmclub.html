@@ -23,11 +23,11 @@
   .affix + .container-fluid {
       padding-top: 70px;
   }
-  #home {padding-top:50px;height: 800px; background-attachment: fixed;}
-  #artist {padding-top:50px; height: 800px; background-attachment: fixed;}
-  #event {padding-top:50px;height: 800px; background-attachment: fixed;}
-  #comment {padding-top:50px;height: 800px; background-attachment: fixed;}
-  #about {padding-top:50px;height: 800px; background-attachment: fixed;}
+  #home {padding-top:50px;height: 800px; background-attachment: fixed; color: black; background-color: aqua}
+  #artist {padding-top:50px; height: 800px; background-attachment: fixed; color: black; background-color:cadetblue}
+  #event {padding-top:50px;height: 800px; background-attachment: fixed; color: black; background-color:burlywood}
+  #comment {padding-top:50px;height: 800px; background-attachment: fixed; color: black; background-color:darkseagreen}
+  #about {padding-top:50px;height: 800px; background-attachment: fixed; color: black; background-color:yellowgreen}
   .carousel-inner > .item > img { 
       width:100%; height:550px; 
       }
@@ -157,20 +157,53 @@
     </div>
 </nav>
 
-<div id="home" class="container">
-   
+<div id="home" class="container-fluid">
+        <h1>This is the Home page....</h1>
 </div>
-<div id="artist" class="container">
-       
+<div id="artist" class="container-fluid">
+        <h2>There are lot of DJs in the world.... Choose your one..</h2>
+    <div class="dropdown">
+        <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
+            Choose your Artist.. <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+                <input type="text" class="form-control" id="myInput3" placeholder="Enter here">
+                <li><a href="#">David Guetta</a></li>
+                <li><a href="#">Avicci</a></li>
+                <li><a href="#">Martine Gariix</a></li>
+                <li><a href="#">The Chainsmokers</a></li>
+                <li><a href="#">Tiesto</a></li>
+                <li><a href="#">Diplo</a></li>
+                <li><a href="#">Afrojack</a></li>
+                <li><a href="#">Major Lasor</a></li>
+                <li><a href="#">Dimitri Vegas and Like Mike</a></li>
+                <li><a href="#">Yellow Claw</a></li>
+                <li><a href="#">Above and Beyond</a></li>
+                <li><a href="#">Oliver Heldens</a></li>
+                <li><a href="#">Swedish House Mafia</a></li>
+                <li><a href="#">Cheat Codes</a></li>
+        </ul>
     </div>
-    <div id="event" class="container">
+    </div>
+    <div id="event" class="container-fluid">
            
         </div>
-        <div id="comment" class="container">
+        <div id="comment" class="container-fluid">
                
             </div>
-            <div id="about" class="container">
+            <div id="about" class="container-fluid">
                   
                 </div>
+
+                <script>
+                        $(document).ready(function(){
+                                      $("#myInput3").on("keyup", function() {
+                                        var value = $(this).val().toLowerCase();
+                                        $(".dropdown-menu li").filter(function() {
+                                          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                        });
+                                      });
+                                    });
+                    </script>
 </body>
 </html>
